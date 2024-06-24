@@ -1,0 +1,4 @@
+#!/bin/bash
+
+gh label list --json name --jq '.[].name' | xargs -I@ gh label delete "@" --yes
+gh label clone gianmarcocalbi/gh-labels -f 
